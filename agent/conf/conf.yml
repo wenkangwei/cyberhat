@@ -1,0 +1,61 @@
+user_profile:
+  email: 1904832812@qq.com
+model:
+  qwen2.5vl:
+    model_name: qwen2.5vl:7b
+    url: http://localhost:11434/v1
+    api_key: ollama
+    model_path: /home/wwk/workspace/ai_project/KnowledgeMaster/model/qwen2.5vl
+  qwen2.5:
+    model_name: qwen2.5:3b
+    url: http://localhost:11434/v1
+    api_key: ollama
+    model_path: /home/wwk/workspace/ai_project/KnowledgeMaster/model/qwen2.5
+  deepseek_r1:
+    model_name: deepseek_r1
+    url: https://api.deepseek.com
+    api_key: <DEEPSEEK_API_TOKEN>
+    model_path: 
+
+memory:
+  redis:
+    host: localhost
+    port: 6379
+    password: ""
+    db: 0
+    timeout: 5000
+  minio:
+    host: localhost
+    port: 9000
+    access_key: minioadmin
+    secret_key: minioadmin
+  elastic_search:
+    host: localhost
+    port: 9200
+    username: elastic
+    password: changeme
+  milvus:
+    host: localhost
+    port: 19530
+    username: root
+    password: Milvus
+    index: book_monster
+  faiss:
+    data_root: /home/wwk/workspace/ai_project/KnowledgeMaster/data/memory/faiss
+    index_name: chunk_vector_faiss.index
+    dict_file: faiss_dict.json
+    dimension: 768
+  mysql:
+    host: localhost
+    port: 3306
+    user: bm
+    password: bookmonster
+    database: open_book_monster
+
+tools:
+  email:
+    sender_email: awk669@qq.com
+    password: <QQ_EMAIL_TOKEN>
+    smtp_server: smtp.qq.com
+    port: 587
+    receiver_email: 1904832812@qq.com
